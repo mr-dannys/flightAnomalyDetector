@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings>
+	<algorithem>
+		<type>model.Zcore</type>
+		<loc>./algs/</loc>
+	</algorithem>
+	<normal>
+		<file>reg_flight.csv</file>
+	</normal>
+	<ports>
+		<send>5400</send>
+		<recive>6400</recive>
+	</ports>
+	<bakarim>
+		<aileron>0</aileron>
+	<elevators></elevators>
+	<rudder></rudder>
+	<throttle></throttle>
+	</bakarim>
+</Settings>

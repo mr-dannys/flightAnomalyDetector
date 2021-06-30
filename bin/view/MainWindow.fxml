@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.ScatterChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import view.JoyStick?>
+<?import view.Player?>
+<?import view.DataList?>
+<?import view.DataGraphs?>
+
+<BorderPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.MainWindowController">
+   <bottom>
+   		<HBox spacing="1" alignment="BASELINE_CENTER">
+   			<Button fx:id="open" text="Open"></Button>
+   			<Button fx:id="fullBack" text="⏮️"></Button>
+   			<Button fx:id="back" text="⏪"></Button>
+   			<Button fx:id="play" text="Play"></Button>
+   			<Button fx:id="pause" text="pause"></Button>
+   			<Button fx:id="stop" text="stop"></Button>
+   			<Button fx:id="forward" text="⏩"></Button>
+   			<Button fx:id="fullForward" text="⏭️"></Button>
+   			<Label text="Play speed"></Label>
+   			<TextField fx:id="speed" text="1.5" prefWidth="40"></TextField>
+   			<Label fx:id="timer" text="00:00:00"></Label>
+   		</HBox>
+   </bottom>
+   <left>
+      <DataList fx:id="dataList"></DataList>
+   </left>
+   <right>
+      <VBox minWidth="360.0" prefHeight="620.0" prefWidth="360.0" BorderPane.alignment="CENTER">
+         <children>
+          <JoyStick fx:id="joyStick" minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="360.0">
+            </JoyStick>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="310.0" prefWidth="360.0">
+               <children>
+                  <Label layoutX="48.0" layoutY="96.0" text="לוח שעונים">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </right>
+   <center>
+   <DataGraphs fx:id="dataGraphs"></DataGraphs>
+
+   </center>
+</BorderPane>
